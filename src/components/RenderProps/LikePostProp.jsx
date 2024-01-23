@@ -1,10 +1,15 @@
 import React from 'react'
-import RenderProps from './RenderProps'
-
-const LikePostProp = () => {
+import RenderProp from './RenderProps'
+const LikePostProps = () => {
   return (
-    
+    <RenderProp>
+                   {
+            ({count,handleCount})=>(
+                <button onClick={handleCount}>Like Post {count}</button>
+            )
+        }
+    </RenderProp>
   )
 }
 
-export default LikePostProp
+export default LikePostProps

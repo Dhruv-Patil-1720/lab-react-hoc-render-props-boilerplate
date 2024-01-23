@@ -1,11 +1,12 @@
-import React from 'react'
+import React, {useState} from 'react'
 
-const CommonRenderProps = ({children}) => {
-    const [count,setCount]=React.useState(0)
-    const handelCount =
-  return (
-    
-  )
+const RenderProp = ({children}) => {
+    let [count,setCount]=useState(0)
+
+    let handleCount =()=>{
+        setCount(prev => prev+1)
+    }
+  return children({count,handleCount})
 }
 
-export default CommonRenderProps
+export default RenderProp

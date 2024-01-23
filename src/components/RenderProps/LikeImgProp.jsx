@@ -1,16 +1,16 @@
 import React from 'react'
-import RenderProps from './RenderProps'
+import RenderProp from './RenderProps'
 
-const LikeImgProp = () => {
+const LikeImageProps = () => {
   return (
-    <RenderProps>
-        {
-            ({count,handleCount}=()=>{
-                
-            })
+    <RenderProp>
+           {
+            ({count,handleCount})=>(
+                <button onClick={handleCount}>Like Image {count}</button>
+            )
         }
-    </RenderProps>
+    </RenderProp>
   )
 }
 
-export default LikeImgProp
+export default LikeImageProps
